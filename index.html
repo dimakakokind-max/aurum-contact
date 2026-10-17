@@ -1,0 +1,45 @@
+    <!-- Подключение EmailJS и логика формы -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Твои ключи
+        const SERVICE_ID = "service_mockjof";
+        const TEMPLATE_ID = "template_eepsoo9";
+        const PUBLIC_KEY = "2qNoFrVLPDj0hQ48V";
+
+        (function() {
+            emailjs.init(PUBLIC_KEY);
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('form-status');
+            
+            btn.textContent = 'Отправка...';
+            btn.disabled = true;
+
+            // Собираем данные из формы
+            const formData = {
+                from_name: this.from_name.value,
+                from_email: this.from_email.value,
+                message: this.message.value
+            };
+
+            // Отправляем
+            emailjs.send(SERVICE_ID, TEMPLATE_ID, formData)
+                .then(function() {
+                    status.textContent = '✅ Заявка отправлена! Я свяжусь с вами в ближайшее время.';
+                    status.style.color = '#32cd32';
+                    document.getElementById('contact-form').reset();
+                    btn.textContent = 'Отправить заявку';
+                    btn.disabled = false;
+                }, function(error) {
+                    status.textContent = '❌ Ошибка отправки. Попробуйте позже.';
+                    status.style.color = '#ff2a75';
+                    console.log('FAILED...', error);
+                    btn.textContent = 'Отправить заявку';
+                    btn.disabled = false;
+                });
+        });
+    </script>
