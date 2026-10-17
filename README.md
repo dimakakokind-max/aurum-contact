@@ -36,7 +36,7 @@
 Ждать ответа. Мы читаем каждую заявку. Серьезно.
 
 🚀 Ссылка на заявку:
-👉 https://dimakakokind-max.github.io/aurum-contact/ 👈
+👉 https://dimakakokind-max.github.io/aurum-contact/index.html 👈
 
 Посмотри, как мы выглядим:
 👉 https://dimakakokind-max.github.io/aurum-parfum/ 👈
