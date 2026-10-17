@@ -1,4 +1,4 @@
-<img width="845" height="734" alt="preview" src="https://github.com/user-attachments/assets/dc30893e-e307-4b22-b53f-66ba4bbb4155" />
+<img width="474" height="541" alt="preview" src="https://github.com/user-attachments/assets/333b3657-a8bb-4995-b8eb-7ff48c58c429" />
 
 💎 AURUM | НАБОР В КОМАНДУ РАЗРАБОТЧИКОВ 💎
 
